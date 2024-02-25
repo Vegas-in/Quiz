@@ -84,7 +84,9 @@ document.querySelector("form").addEventListener("submit", function (event) {
        }
         
     }
-    alert("Este es el resultado:" + msj)
+
+    alert("Este es el resultado:\n" + msj)
+
     event.target.submit();
 });
 

@@ -17,9 +17,14 @@ Subirlo GitHub Pages y compartid el enlace (y ponedlo en el fichero Readme).
 Referencia: https://github.com/TheBridge-FullStackDeveloper/proyectos-quiz
 
 
+
+
 ENLACE A GITHUB PAGES DEL QUIZ:
 
 vegas-in.github.io/Quiz/
+
+
+
 
 
 PREGUTNAS Y SOLUCIONES PARA EL QUIZ:
