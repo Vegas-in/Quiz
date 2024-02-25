@@ -2,19 +2,15 @@ const preguntas = ["¿Quién es considerado el hombre que inventó el teléfono?
 
 const respuestas = ["Graham Bell", "Júpiter", "Diamante", "32", "Laika", "Valentina tereshkova", "Parte inferior de los pies", "8 minutos", "206", "Digestión"];
 
-const respuesFalsas = ["Newton", "Tesla", "Telefonica", "Marte", "Pandora", "Tatooine", "Hulk", "Titanio", "Adamantium", "23", "58", "1024", "Lassie", "Scooby-DO", "Snoopy", "Capitana Marvel", "Belén Esteban", "Marie Curie", "Las axilas", "Los ojos", "Las pestañas", "8 horas", "8 dias", "8 nanosegundos", "207", "307", "308", "Implosión", "Desintegración", "Hadouken"]
+const respuesFalsas = ["Newton", "Tesla", "Manolo de Telefonica", "Marte", "Pandora", "Tatooine", "Hulk", "Titanio", "Adamantium", "23", "58", "1024", "Lassie", "Scooby-DO", "Snoopy", "Capitana Marvel", "Belén Esteban", "Marie Curie", "Las axilas", "Los ojos", "Las pestañas", "8 horas", "8 dias", "8 nanosegundos", "207", "307", "308", "Implosión", "Desintegración", "Hadouken"]
 
 
 
-function shuffle (array){                 // funcion copiada para solucionar para que mezcle las poscioones de las respuestas
+function shuffle (array){                 // funcion copiada para solucionar el probelma de mezclar las posiciones de las respuestas
     array.sort(()=> Math.random() -0.5);
 }
 
-
-
 function pintarTablas() {  
-
-    
 
     let contador = 0
 
@@ -22,34 +18,31 @@ function pintarTablas() {
 
         let respuestasAleatorias = [];
         
-        
         respuestasAleatorias.push(respuestas[i])
         respuestasAleatorias.push(respuesFalsas[contador++])
         respuestasAleatorias.push(respuesFalsas[contador++])
         respuestasAleatorias.push(respuesFalsas[contador++])
         shuffle(respuestasAleatorias)
 
-        let template = `<table border="2px">
-                                        <th colspan="2"><label>${preguntas[i]}</label></th>
+        let template = `<table class="tabla">
+                                        <th colspan="2"><label><h2>${preguntas[i]}</h2></label></th>
                                         <tr>
-                                            <td>
-                                                <input type="radio"  id="resp${i}"  value="${respuestasAleatorias[0]}"/>
+                                            <td class="inputColor1">
+                                                <input type="radio" id="resp${i}"  value="${respuestasAleatorias[0]}"/>
                                                 <label>${respuestasAleatorias[0]}</label>
-                                                
                                             </td>
-                                            <td>
+                                            <td class="inputColor2">
                                                 <input type="radio" id="resp${i}" value="${respuestasAleatorias[1]}"/>
                                                 <label>${respuestasAleatorias[1]}</label>
-                                                
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>
+                                            <td class="inputColor3">
                                                 <input type="radio" id="resp${i}" value="${respuestasAleatorias[2]}"/>
                                                 <label>${respuestasAleatorias[2]}</label>
                                                 
                                             </td>
-                                            <td>
+                                            <td class="inputColor4">
                                                 <input type="radio" id="resp${i}" value="${respuestasAleatorias[3]}"/>
                                                 <label>${respuestasAleatorias[3]}</label>
                                             </td>
@@ -62,7 +55,7 @@ function pintarTablas() {
     
 }
 
-pintarTablas();
+
 
 document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault();
@@ -91,9 +84,13 @@ document.querySelector("form").addEventListener("submit", function (event) {
        }
         
     }
-    alert(msj)
+    alert("Este es el resultado:" + msj)
     event.target.submit();
 });
+
+
+pintarTablas();
+
 
 
 
