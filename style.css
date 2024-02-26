@@ -1,5 +1,5 @@
 body{
-    background-color:lightcyan;
+    background-color:rgb(15, 16, 16);
 }
 h1{
     font-family: "Concert One", sans-serif;
@@ -25,6 +25,7 @@ table{
 
 th{
     padding: 15px;
+    color: white;
 }
 
 td{
