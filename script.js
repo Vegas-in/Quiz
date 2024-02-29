@@ -24,30 +24,34 @@ function pintarTablas() {
         respuestasAleatorias.push(respuesFalsas[contador++])
         shuffle(respuestasAleatorias)
 
-        let template = `<table class="tabla">
-                                        <th colspan="2"><label><h2>${preguntas[i]}</h2></label></th>
-                                        <tr>
-                                            <td class="inputColor1">
-                                                <input type="radio" id="resp${i}"  value="${respuestasAleatorias[0]}"/>
-                                                <label>${respuestasAleatorias[0]}</label>
-                                            </td>
-                                            <td class="inputColor2">
-                                                <input type="radio" id="resp${i}" value="${respuestasAleatorias[1]}"/>
-                                                <label>${respuestasAleatorias[1]}</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="inputColor3">
-                                                <input type="radio" id="resp${i}" value="${respuestasAleatorias[2]}"/>
-                                                <label>${respuestasAleatorias[2]}</label>
-                                                
-                                            </td>
-                                            <td class="inputColor4">
-                                                <input type="radio" id="resp${i}" value="${respuestasAleatorias[3]}"/>
-                                                <label>${respuestasAleatorias[3]}</label>
-                                            </td>
-                                        </tr>
-                                </table>`;
+        let template = `<section class="contPregunta">
+                            <div>
+                                <h2>${preguntas[i]}</h2>
+                            </div>
+                        </section>
+                        <section class="tarjPregunta">
+                                    <article>
+                                        <div id="contResp1" class="botonRespu">
+                                            <input type="radio" id="p${[i]}-r1" name="boton${[i]}" value="${respuestasAleatorias[0]}"/>
+                                            <label for="p${[i]}-r1">${respuestasAleatorias[0]}</label>
+                                        </div>
+                                        <div id="contResp2" class="botonRespu">
+                                            <input type="radio" id="p${[i]}-r2" name="boton${[i]}" value="${respuestasAleatorias[1]}"/>
+                                            <label for="p${[i]}-r2">${respuestasAleatorias[1]}</label>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <div id="contResp3" class="botonRespu">
+                                            <input type="radio" id="p${[i]}-r3" name="boton${[i]}" value="${respuestasAleatorias[2]}"/>
+                                            <label for="p${[i]}-r3">${respuestasAleatorias[2]}</label>
+                                            
+                                        </div>
+                                        <div id="contResp4" class="botonRespu">
+                                            <input type="radio" id="p${[i]}-r4" name="boton${[i]}" value="${respuestasAleatorias[3]}"/>
+                                            <label for="p${[i]}-r4">${respuestasAleatorias[3]}</label>
+                                        </div>
+                                    </article>
+                        </section>`;
 
                 document.getElementById("pregYRespu").innerHTML += template;
         
@@ -64,20 +68,23 @@ document.querySelector("form").addEventListener("submit", function (event) {
 
     let msj = ""
 
-    respUsuario.push(event.target.resp0.value);
-    respUsuario.push(event.target.resp1.value);
-    respUsuario.push(event.target.resp2.value);
-    respUsuario.push(event.target.resp3.value);
-    respUsuario.push(event.target.resp4.value);
-    respUsuario.push(event.target.resp5.value);
-    respUsuario.push(event.target.resp6.value);
-    respUsuario.push(event.target.resp7.value);
-    respUsuario.push(event.target.resp8.value);
-    respUsuario.push(event.target.resp9.value);
+    respUsuario.push(event.target.boton0.value);
+    respUsuario.push(event.target.boton1.value);
+    respUsuario.push(event.target.boton2.value);
+    respUsuario.push(event.target.boton3.value);
+    respUsuario.push(event.target.boton4.value);
+    respUsuario.push(event.target.boton5.value);
+    respUsuario.push(event.target.boton6.value);
+    respUsuario.push(event.target.boton7.value);
+    respUsuario.push(event.target.boton8.value);
+    respUsuario.push(event.target.boton9.value);
     
     for (let i = 0; i < respUsuario.length; i++) {
         if (respUsuario[i] == respuestas[i]) {
         msj += `Has acertado, la respuesta correcta es ${respuestas[i]} \n`;
+       } 
+       else if(respUsuario[i] == "") {
+        msj += `No has marcado la respuesta ${[i]} \n`;
        } 
        else{
         msj += `Has fallado, la respuesta correcta es ${respuestas[i]} \n`;
@@ -90,10 +97,6 @@ document.querySelector("form").addEventListener("submit", function (event) {
 
 
 pintarTablas();
-
-
-
-
 
 
 
