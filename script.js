@@ -79,9 +79,12 @@ document.querySelector("form").addEventListener("submit", function (event) {
     respUsuario.push(event.target.boton8.value);
     respUsuario.push(event.target.boton9.value);
     
+    let cont=0
+
     for (let i = 0; i < respUsuario.length; i++) {
         if (respUsuario[i] == respuestas[i]) {
         msj += `Has acertado, la respuesta correcta es ${respuestas[i]} \n`;
+        cont++
        } 
        else if(respUsuario[i] == "") {
         msj += `No has marcado la respuesta ${[i]} \n`;
@@ -91,7 +94,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
        }
         
     }
-    alert("Este es el resultado:\n" + msj)
+    alert("YEAHH!! VAMOS A VER TUS RESULTADOS!!\n" + `Has acertado ${cont}/10!!\n`+"Este es el resultado por preguntas:\n" + msj)
     event.target.submit();
 });
 
