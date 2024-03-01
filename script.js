@@ -6,7 +6,7 @@ const respuesFalsas = ["Newton", "Tesla", "Manolo de Telefonica", "Marte", "Pand
 
 
 
-function shuffle (array){                 // funcion copiada para solucionar el probelma de mezclar las posiciones de las respuestas
+function shuffle (array){                 // funcion para solucionar el probelma de mezclar las posiciones de las respuestas
     array.sort(()=> Math.random() -0.5);
 }
 

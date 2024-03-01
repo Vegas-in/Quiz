@@ -100,7 +100,7 @@ label{
     border-radius: 10px;
     height: 50%;
     margin: 10px;
-    box-shadow: 15px 15px 15px 15px rgb(175, 1, 36) inset;
+    box-shadow: 5px 10px 10px 10px rgb(175, 1, 36) inset;
 }
 
 #contResp2{
@@ -111,7 +111,7 @@ label{
     border-radius: 10px;
     height: 50%;
     margin: 10px;
-    box-shadow: 15px 15px 15px 15px rgb(139, 100, 2) inset;
+    box-shadow: 5px 10px 10px 10px rgb(139, 100, 2) inset;
 }
 
 #contResp3{
@@ -122,7 +122,7 @@ label{
     border-radius: 10px;
     height: 50%;
     margin: 10px;
-    box-shadow: 15px 15px 15px 15px rgb(56, 184, 56) inset;
+    box-shadow: 5px 10px 10px 10px rgb(56, 184, 56) inset;
 }
 
 #contResp4{
@@ -133,12 +133,12 @@ label{
     border-radius: 10px;
     height: 50%;
     margin: 10px;
-    box-shadow: 15px 15px 15px 15px rgb(29, 101, 234) inset;
+    box-shadow: 5px 10px 10px 10px rgb(29, 101, 234) inset;
 }
 
 .botonRespu :hover{
      background-color: rgb(225, 16, 141);
-     box-shadow: 10px 10px  rgb(110, 6, 69) inset;
+     box-shadow: 10px 0px 10px rgb(110, 6, 69) inset;
      border-radius: 10px;
      cursor: pointer;
 }
@@ -155,8 +155,9 @@ label{
     width: 300px;
     height: 60px;
     border-radius: 10px;
-    background-color: rgb(4, 68, 11);
+    background-color: rgb(7, 110, 19);
     margin-bottom: 50px;
     font-size: 20px;
     margin-top: 100px;
+    box-shadow: 0px 10px 10px 0px rgb(242, 242, 244);
 }
