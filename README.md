@@ -21,7 +21,7 @@ Referencia: https://github.com/TheBridge-FullStackDeveloper/proyectos-quiz
 
 ENLACE A GITHUB PAGES DEL QUIZ:
 
-vegas-in.github.io/Quiz/
+https://vegas-in.github.io/Quiz/
 
 
 
