@@ -64,20 +64,23 @@ document.querySelector("form").addEventListener("submit", function (event) {
 
     let msj = ""
 
-    respUsuario.push(event.target.resp0.value);
-    respUsuario.push(event.target.resp1.value);
-    respUsuario.push(event.target.resp2.value);
-    respUsuario.push(event.target.resp3.value);
-    respUsuario.push(event.target.resp4.value);
-    respUsuario.push(event.target.resp5.value);
-    respUsuario.push(event.target.resp6.value);
-    respUsuario.push(event.target.resp7.value);
-    respUsuario.push(event.target.resp8.value);
-    respUsuario.push(event.target.resp9.value);
+    respUsuario.push(event.target.boton0.value);
+    respUsuario.push(event.target.boton1.value);
+    respUsuario.push(event.target.boton2.value);
+    respUsuario.push(event.target.boton3.value);
+    respUsuario.push(event.target.boton4.value);
+    respUsuario.push(event.target.boton5.value);
+    respUsuario.push(event.target.boton6.value);
+    respUsuario.push(event.target.boton7.value);
+    respUsuario.push(event.target.boton8.value);
+    respUsuario.push(event.target.boton9.value);
     
     for (let i = 0; i < respUsuario.length; i++) {
         if (respUsuario[i] == respuestas[i]) {
         msj += `Has acertado, la respuesta correcta es ${respuestas[i]} \n`;
+       } 
+       else if(respUsuario[i] == "") {
+        msj += `No has marcado la respuesta ${[i]} \n`;
        } 
        else{
         msj += `Has fallado, la respuesta correcta es ${respuestas[i]} \n`;
